@@ -1,0 +1,104 @@
+/* ======= Pricing style ======= */
+.price-box {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.price-box:hover .price-box-inner {
+    -webkit-clip-path: inset(15px 15px 15px 15px);
+    clip-path: inset(15px 15px 15px 15px)
+}
+
+.price-box .price-box-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+    -webkit-transition: all 1.25s cubic-bezier(.01, .71, .26, .94);
+    -moz-transition: all 1.25s cubic-bezier(.01, .71, .26, .94);
+    transition: all 1.25s cubic-bezier(.01, .71, .26, .94)
+}
+
+.price-box .price-box-inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 30px 0;
+}
+
+.price-box .price-box-inner ul li {
+    margin: 0;
+    padding: 0 30px;
+    text-align: center
+}
+
+.price-box .price-box-inner ul li.pricing-title {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.75em;
+    font-weight: 400;
+    letter-spacing: 1px
+}
+
+.price-box .price-box-inner ul li.pricing-title .pricing-pt-title {
+    color: #f96f00;
+    display: block;
+    padding: 28px 0 0;
+    box-sizing: border-box;
+    font-size: 25px;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.price-box .price-box-inner ul li.pricing-prices {
+    position: relative;
+    padding: 7px 15px 0;
+}
+
+.price-box .price-box-inner ul li.pricing-prices .pricing-dolar {
+    position: relative;
+    bottom: 2px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1em;
+    font-weight: 400;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.price-box .price-box-inner ul li.pricing-prices .pricing-price {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    left: -5px;
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1em;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-box .price-box-inner ul li.pricing-content {
+    padding: 10px 15px 30px;
+    color: #fff;
+    line-height: 35px
+}
+
+/* section padding */
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px
+}

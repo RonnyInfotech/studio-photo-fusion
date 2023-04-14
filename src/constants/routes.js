@@ -1,0 +1,9 @@
+export const HOME = "/";
+export const ABOUT = "/about";
+export const CONTACT = "/contact";
+export const FOOTER = "/footer";
+export const HEADER = "/header";
+export const PACKAGES = "/packages";
+export const PORTFOLIO = "/portfolio";
+export const SERVICES = "/services";
+export const TESTIMONIAL = "/Testimonial";

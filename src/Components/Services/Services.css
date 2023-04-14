@@ -1,0 +1,207 @@
+.title span {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f96f00;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.title h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 60px;
+    line-height: 1.25em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* ======= Services style ======= */
+.services .item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    float: left;
+    box-sizing: border-box
+}
+
+.services .item:hover .item-inner {
+    -webkit-clip-path: inset(15px 15px 15px 15px);
+    clip-path: inset(15px 15px 15px 15px)
+}
+
+.services .item .item-inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+    -webkit-transition: all 1.25s cubic-bezier(.01, .71, .26, .94);
+    -moz-transition: all 1.25s cubic-bezier(.01, .71, .26, .94);
+    transition: all 1.25s cubic-bezier(.01, .71, .26, .94)
+}
+
+.services .item:hover img {
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform: scale(1.09, 1.09);
+    transform: scale(1.09, 1.09);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.services .item:hover .con {
+    bottom: 0;
+}
+
+.services .item img {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.services .item .con {
+    padding: 30px;
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+}
+
+.services .item .con .category {
+    margin-bottom: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #f96f00 !important;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.services .item .con .category a {
+    margin-right: 5px;
+    position: relative;
+}
+
+.services .item .con .category a:last-child {
+    margin-right: 0;
+}
+
+.services .item .con .category a:last-child:after {
+    display: none;
+}
+
+.services .item .con h5 {
+    color: #fff !important;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.services .item .con p {
+    color: #fff !important;
+    font-size: 15px;
+}
+
+.services .item .con i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.services .item .con i:hover {
+    color: #f96f00;
+}
+
+.services .item .con .btn {
+    margin-left: 0;
+    border-radius: 30px;
+    border-color: #000;
+    padding: 11px 30px;
+}
+
+.services .item .con .btn:hover {
+    border-color: #f96f00;
+    ;
+}
+
+/* image grayscale */
+.img-grayscale img {
+    -webkit-filter: grayscale(90%);
+    -webkit-transition: .4s ease-in-out;
+    -moz-filter: grayscale(90%);
+    -moz-transition: .4s ease-in-out;
+    -o-filter: grayscale(90%);
+    -o-transition: .4s ease-in-out
+}
+
+.img-grayscale:hover img {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%)
+}
+
+/* important */
+.title h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 60px;
+    line-height: 1.25em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.title span {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f96f00;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.title span a {
+    color: #f96f00;
+}
+
+/* section padding */
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px
+}
+
+/* ======= General style ======= */
+a {
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* underline button */
+a.underline-text {
+    color: #777;
+    font-size: 16px;
+    border-bottom: 1px solid #f96f00;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 400;
+}
+
+a.underline-text:hover {
+    border-bottom: 1px solid transparent;
+}

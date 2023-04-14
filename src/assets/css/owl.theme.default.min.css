@@ -1,0 +1,75 @@
+/* ======= Owl theme style ======= */
+.owl-theme .owl-dots .owl-dot span {
+    background-color: #f96f00;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #f96f00;
+}
+
+.owl-theme .owl-dots .owl-dot.active {
+    border-color: #f96f00;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    position: relative;
+    background-color: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 4px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 4px;
+    height: 4px;
+    margin: 0;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active {
+    border: 1px solid #f96f00;
+}
+
+.owl-theme .owl-dots .owl-dot:hover {
+    border: 1px solid #f96f00;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #f96f00;
+}
+
+.owl-theme .owl-dots .owl-dot:focus {
+    outline: none;
+}
+
+@media (max-width: 992px) {
+    .owl-theme .owl-nav.disabled+.owl-dots {
+        bottom: 0;
+    }
+}
