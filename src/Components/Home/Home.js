@@ -28,11 +28,12 @@ const Home = () => {
                 <div className="welcome-slides">
                     <Carousel
                         ssr
+                        removeArrowOnDeviceType={["tablet", "mobile"]}
                         responsive={responsive}
                     >
-                        {images.map(ele => {
+                        {images.map((ele, index) => {
                             return (
-                                <div className="single-welcome-slide bg-img bg-overlay" style={{ backgroundImage: `url(${require("../../assets/img/bg-img/38.jpg")})` }}>
+                                <div key={index} className="single-welcome-slide bg-img bg-overlay" style={{ backgroundImage: `url(${require("../../assets/img/bg-img/38.jpg")})` }}>
                                     <div className="container h-100">
                                         <div className="row h-100 align-items-center">
                                             <div className="col-12 col-lg-8 col-xl-6">

@@ -1,5 +1,7 @@
 import React from 'react';
-import Carousel from 'react-multi-carousel';
+import { Link } from 'react-router-dom';
+import * as ROUTES from "../../constants/routes";
+import FollowInstagram from '../FollowInstagram/FollowInstagram';
 
 const Contact = () => {
     return (
@@ -12,7 +14,10 @@ const Contact = () => {
                                 <h2 className="page-title">Contact</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb justify-content-center">
-                                        <li className="breadcrumb-item"><a href="index.html"><i className="icon_house_alt"></i> Home</a>
+                                        <li className="breadcrumb-item">
+                                            <Link to={ROUTES.HOME}>
+                                                <i className="icon_house_alt"></i> Home
+                                            </Link>
                                         </li>
                                         <li className="breadcrumb-item active" aria-current="page">Contact</li>
                                     </ol>
@@ -65,6 +70,7 @@ const Contact = () => {
                 </div>
             </div>
             {/* Map Area End  */}
+            <FollowInstagram />
         </div>
     )
 }

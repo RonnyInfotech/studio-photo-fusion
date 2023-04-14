@@ -1,4 +1,4 @@
-export const HOME = "/";
+export const HOME = "/studio-photo-fusion";
 export const ABOUT = "/about";
 export const CONTACT = "/contact";
 export const FOOTER = "/footer";

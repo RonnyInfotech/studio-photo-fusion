@@ -2,6 +2,7 @@ import React from 'react';
 import './Packages.css';
 import * as ROUTES from "../../constants/routes";
 import { Link } from 'react-router-dom';
+import FollowInstagram from '../FollowInstagram/FollowInstagram';
 
 const Packages = () => {
     return (
@@ -104,6 +105,8 @@ const Packages = () => {
                     </div>
                 </div>
             </section >
+
+            <FollowInstagram />
         </div >
     )
 }

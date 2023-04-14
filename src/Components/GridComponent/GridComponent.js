@@ -43,9 +43,8 @@ const GridComponent = () => {
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1050: 4, 1250: 5 }}>
             <Masonry gutter="20px">
                 {images.map((image, i) => (
-                    // <div className="single_gallery_item nature wow fadeInUp" data-wow-delay="100ms">
-                    <div className="single-portfolio-content">
-                        <img key={i} src={image} alt="" />
+                    <div key={i} className="single-portfolio-content">
+                        <img src={image} alt="" />
                         <div className="hover-content">
                             <a href={image} className="portfolio-img">+</a>
                         </div>

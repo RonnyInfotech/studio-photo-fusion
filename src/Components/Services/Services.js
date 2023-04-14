@@ -61,15 +61,13 @@ const Services = () => {
             <div className="col-md-12 mb-30">
               <Carousel
                 ssr
-                // autoPlay
-                // showDots
-                // dotListClass="custom-dot-list-style"
                 infinite
+                removeArrowOnDeviceType={["tablet", "mobile"]}
                 responsive={responsive}
               >
-                {images.map(ele => {
+                {images.map((ele, i) => {
                   return (
-                    <div className="item" style={{ padding: '15px' }}>
+                    <div key={i} className="item" style={{ padding: '15px' }}>
                       <div className="position-re o-hidden img-grayscale item-inner"> <img src={require('../../assets/img/services/1.jpg')} alt="" /> </div>
                       <div className="con"> <span className="category">
                         <a href="potrait-photography.html" style={{ color: '#f96f00' }}>Discover</a>

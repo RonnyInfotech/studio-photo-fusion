@@ -40,17 +40,14 @@ const FollowInstagram = () => {
                 ssr
                 swipeable
                 draggable
-                // partialVisbile
                 removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
                 autoPlay
                 infinite
-                // deviceType={deviceType}
-                itemClass="image-item"
                 responsive={responsive}
             >
-                {images.map(ele => {
+                {images.map((ele, index) => {
                     return (
-                        <div className="single-instagram-item">
+                        <div className="single-instagram-item" key={index}>
                             <img src={require('../../assets/img/bg-img/11.jpg')} alt="" />
                             <div className="instagram-hover-content text-center d-flex align-items-center justify-content-center">
                                 <Link to={"/"}>
