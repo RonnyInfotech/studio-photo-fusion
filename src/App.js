@@ -14,31 +14,32 @@ import Services from './Components/Services/Services';
 import Testimonial from './Components/Testimonial/Testimonial';
 import FollowInstagram from './Components/FollowInstagram/FollowInstagram';
 import GridComponent from './Components/GridComponent/GridComponent';
+import PhotoFusionContextProvider from './contexts/PhotoFusionContext';
 
 const App = () => {
-  useEffect(() => {
-    AOS.init()
-    AOS.refresh()
-    AOS.init({
-      duration: 500
-    });
-  }, [])
+  AOS.init()
+  AOS.refresh()
+  AOS.init({
+    duration: 500
+  });
   return (
     <BrowserRouter>
-      <Header />
-      <div className="App">
-        <Routes>
-          <Route path={ROUTES.HOME} element={<Home />} />
-          <Route path={ROUTES.ABOUT} element={<About />} />
-          <Route path={ROUTES.CONTACT} element={<Contact />} />
-          <Route path={ROUTES.PACKAGES} element={<Packages />} />
-          <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
-          <Route path={ROUTES.SERVICES} element={<Services />} />
-          <Route path={ROUTES.TESTIMONIAL} element={<Testimonial />} />
-        </Routes>
-      </div>
-      {/* <FollowInstagram /> */}
-      <Footer />
+      <PhotoFusionContextProvider>
+        <Header />
+        <div className="App">
+          <Routes>
+            <Route path={ROUTES.HOME} element={<Home />} />
+            <Route path={ROUTES.ABOUT} element={<About />} />
+            <Route path={ROUTES.CONTACT} element={<Contact />} />
+            <Route path={ROUTES.PACKAGES} element={<Packages />} />
+            <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
+            <Route path={ROUTES.SERVICES} element={<Services />} />
+            <Route path={ROUTES.TESTIMONIAL} element={<Testimonial />} />
+          </Routes>
+        </div>
+        {/* <FollowInstagram /> */}
+        <Footer />
+      </PhotoFusionContextProvider>
     </BrowserRouter>
   )
 }

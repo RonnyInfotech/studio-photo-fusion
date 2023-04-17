@@ -1,8 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
-import './Home.css';
-import { Link } from 'react-router-dom';
 import GridComponent from '../GridComponent/GridComponent';
+import './Home.css';
 
 const Home = () => {
     const images = [

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
+import { PhotoFusionContext } from '../../contexts/PhotoFusionContext';
 
 const About = () => {
+  const { first } = useContext(PhotoFusionContext);
   return (
     <div>
       {/* Breadcrumb Area Start */}
@@ -196,4 +198,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;

@@ -52,7 +52,7 @@ const GridComponent = () => {
                 ))}
             </Masonry>
         </ResponsiveMasonry>
-    )
+    );
 }
 
 export default GridComponent;
