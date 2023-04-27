@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Home from './Components/Home/Home';
 import * as ROUTES from "./constants/routes";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -12,8 +12,6 @@ import Packages from './Components/Packages/Packages';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Services from './Components/Services/Services';
 import Testimonial from './Components/Testimonial/Testimonial';
-import FollowInstagram from './Components/FollowInstagram/FollowInstagram';
-import GridComponent from './Components/GridComponent/GridComponent';
 import PhotoFusionContextProvider from './contexts/PhotoFusionContext';
 
 const App = () => {
