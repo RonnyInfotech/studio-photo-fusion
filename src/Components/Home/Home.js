@@ -2,6 +2,8 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import GridComponent from '../GridComponent/GridComponent';
 import './Home.css';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const images = [
@@ -37,12 +39,18 @@ const Home = () => {
                                         <div className="row h-100 align-items-center">
                                             <div className="col-12 col-lg-8 col-xl-6">
                                                 <div className="welcome-text">
-                                                    <h2 className='animate__animated animate__bounceInUp'>Hello <br />I'm Alime</h2>
-                                                    <p data-animation="bounceInUp" data-delay="500ms">I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies or teachers.</p>
-                                                    <div className="hero-btn-group" data-animation="bounceInUp" data-delay="900ms">
-                                                        <a href="#" className="btn alime-btn mb-3 mb-sm-0 mr-4">Get a Quote</a>
-                                                        <a className="hero-mail-contact" href="mailto:hello.alime@gmail.com">hello.alime@gmail.com</a>
-                                                    </div>
+                                                    <AnimationOnScroll animateIn="animate__bounceInUp" delay={100} animateOnce={true}>
+                                                        <h2>Hello <br />I'm Alime</h2>
+                                                    </AnimationOnScroll>
+                                                    <AnimationOnScroll animateIn="animate__bounceInUp" delay={500} animateOnce={true}>
+                                                        <p>I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies or teachers.</p>
+                                                    </AnimationOnScroll>
+                                                    <AnimationOnScroll animateIn="animate__bounceInUp" delay={900} animateOnce={true}>
+                                                        <div className="hero-btn-group">
+                                                            <a href="#" className="btn alime-btn mb-3 mb-sm-0 mr-4">Get a Quote</a>
+                                                            <a className="hero-mail-contact" href="mailto:hello.alime@gmail.com">hello.alime@gmail.com</a>
+                                                        </div>
+                                                    </AnimationOnScroll>
                                                 </div>
                                             </div>
                                         </div>
@@ -74,9 +82,9 @@ const Home = () => {
                     <GridComponent />
 
                     <div className="row">
-                        <div className="col-12 text-center wow fadeInUp" data-wow-delay="700ms">
-                            <a href="#" className="btn alime-btn btn-2 mt-15">View More</a>
-                        </div>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={700} className='col-12 text-center'>
+                            <Link to={'/studio-photo-fusion'} className='btn alime-btn btn-2 mt-15'>View More</Link>
+                        </AnimationOnScroll>
                     </div>
                 </div>
             </div>

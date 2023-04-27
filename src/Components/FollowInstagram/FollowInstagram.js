@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Carousel from 'react-multi-carousel';
 import { Link } from 'react-router-dom';
 
@@ -28,10 +29,10 @@ const FollowInstagram = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div className="section-heading text-center">
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='section-heading text-center'>
                             <h2>Follow Instagram</h2>
                             <p>@studio_photo_fusion</p>
-                        </div>
+                        </AnimationOnScroll>
                     </div>
                 </div>
             </div>

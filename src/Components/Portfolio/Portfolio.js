@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Portfolio = () => {
     return (
@@ -34,7 +35,7 @@ const Portfolio = () => {
                     <div className="row">
                         <div className="col-12">
                             {/* Projects Menu  */}
-                            <div className="alime-projects-menu wow fadeInUp" data-wow-delay="100ms">
+                            <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='alime-projects-menu'>
                                 <div className="portfolio-menu text-center">
                                     <button className="btn active" data-filter="*">All</button>
                                     <button className="btn" data-filter=".human">Baby Shoot</button>
@@ -42,100 +43,100 @@ const Portfolio = () => {
                                     <button className="btn" data-filter=".country">Wedding</button>
                                     <button className="btn" data-filter=".video">Engagement</button>
                                 </div>
-                            </div>
+                            </AnimationOnScroll>
                         </div>
                     </div>
                     <div className="row alime-portfolio">
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item nature mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='col-12 col-sm-6 col-lg-4 single_gallery_item nature mb-30'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/39.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/39.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item video human mb-30 wow fadeInUp" data-wow-delay="300ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={300} className='col-12 col-sm-6 col-lg-4 single_gallery_item video human mb-30'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/40.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/40.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item country mb-30 wow fadeInUp" data-wow-delay="500ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={500} className='col-12 col-sm-6 col-lg-4 single_gallery_item country mb-30'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/41.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/41.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="700ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={700} className='col-12 col-sm-6 col-lg-4 single_gallery_item human'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/42.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/42.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item nature mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='col-12 col-sm-6 col-lg-4 single_gallery_item nature mb-30'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/43.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/43.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item video country mb-30 wow fadeInUp" data-wow-delay="300ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={300} className='col-12 col-sm-6 col-lg-4 single_gallery_item video country mb-30'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/44.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/44.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="500ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={500} className='col-12 col-sm-6 col-lg-4 single_gallery_item human mb-30'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/45.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/45.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item nature mb-30 wow fadeInUp" data-wow-delay="700ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={700} className='col-12 col-sm-6 col-lg-4 single_gallery_item nature mb-30'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/46.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/46.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item video country mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='col-12 col-sm-6 col-lg-4 single_gallery_item video country'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/47.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/47.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="300ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={300} className='col-12 col-sm-6 col-lg-4 single_gallery_item human'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/48.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/48.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item country mb-30 wow fadeInUp" data-wow-delay="500ms">
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={500} className='col-12 col-sm-6 col-lg-4 single_gallery_item country'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/49.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/49.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
+                        </AnimationOnScroll>
                         {/* Single Gallery Item  */}
-                        <div className="col-12 col-sm-6 col-lg-4 single_gallery_item country mb-30 wow fadeInUp" data-wow-delay="700ms">
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={700} className='col-12 col-sm-6 col-lg-4 single_gallery_item country'>
                             <div className="single-portfolio-content">
                                 <a href={require("../../assets/img/bg-img/50.jpg")} className="portfolio-img img-grayscale">
                                     <img src={require("../../assets/img/bg-img/50.jpg")} alt="" />
                                 </a>
                             </div>
-                        </div>
+                        </AnimationOnScroll>
                     </div>
                     <div className="row">
-                        <div className="col-12 text-center wow fadeInUp" data-wow-delay="800ms">
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={800} className='col-12 text-center'>
                             <a href="#" className="btn alime-btn btn-2 mt-15">View More</a>
-                        </div>
+                        </AnimationOnScroll>
                     </div>
                 </div>
             </div>

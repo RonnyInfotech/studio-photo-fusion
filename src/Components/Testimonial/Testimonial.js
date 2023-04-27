@@ -4,6 +4,7 @@ import * as ROUTES from "../../constants/routes";
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
 import Carousel from 'react-multi-carousel';
 import './Testimonial.css';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Testimonial = () => {
     const images = [
@@ -51,9 +52,10 @@ const Testimonial = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="title mb-30"> <span>What clients think</span>
+                            <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='title mb-30'>
+                                <span>What clients think</span>
                                 <h2>Clients say</h2>
-                            </div>
+                            </AnimationOnScroll>
                         </div>
                     </div>
                     <Carousel
@@ -68,12 +70,21 @@ const Testimonial = () => {
                         {images.map((ele, index) => {
                             return (
                                 <div className="item-box" key={index}><span className="quote"><img src={require('../../assets/img/quot.png')} alt="" /></span>
-                                    <p>"Dan tristique usto duision vitae diamen neque nivamus aesta atene artines arinianu ateli finibus viverra nec lacus. Nedana dinoz setlie suscipe none misster cuvvan tristique. Developer inila duman aten elit finibus viveracus themone the dru."</p>
+                                    <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} >
+                                        <p>"Dan tristique usto duision vitae diamen neque nivamus aesta atene artines arinianu ateli finibus viverra nec lacus. Nedana dinoz setlie suscipe none misster cuvvan tristique. Developer inila duman aten elit finibus viveracus themone the dru."</p>
+                                    </AnimationOnScroll>
                                     <div className="info">
-                                        <div className="author-img"> <img src={require('../../assets/img/author-image/author-image-3.png')} alt="" /> </div>
-                                        <div className="cont">
+                                        {/* <div className="author-img"> */}
+                                        <AnimationOnScroll animateIn="animate__zoomIn" delay={200} className='author-img' >
+                                            <img src={require('../../assets/img/author-image/author-image-3.png')} alt="" />
+                                        </AnimationOnScroll>
+                                        {/* </div> */}
+                                        {/* <div className="cont"> */}
+                                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={200} className='cont' >
                                             <h6>Olivia & Enrico</h6> <span>Wedding Shooting</span>
-                                        </div>
+                                        </AnimationOnScroll>
+
+                                        {/* </div> */}
                                     </div>
                                 </div>
                             )

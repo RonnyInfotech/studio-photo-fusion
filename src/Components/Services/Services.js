@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import './Services.css';
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Services = () => {
   const images = [
@@ -52,9 +53,10 @@ const Services = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="title mb-30"> <span>What We Do</span>
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='title mb-30'>
+                <span>What We Do</span>
                 <h2>Our Services</h2>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
           <div className="row">
@@ -82,7 +84,11 @@ const Services = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-12 text-right"> <a className="underline-text" href="services.html">All Services</a> </div>
+            <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='col-md-12 text-right'>
+              <a className="underline-text" href="services.html">
+                All Services
+              </a>
+            </AnimationOnScroll>
           </div>
         </div>
       </section>

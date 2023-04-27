@@ -1,11 +1,19 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
 import { PhotoFusionContext } from '../../contexts/PhotoFusionContext';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const About = () => {
   const { first } = useContext(PhotoFusionContext);
+  const navigate = useNavigate();
+
+  // const handleContactUs = () => {
+  //   console.log("Demo..");
+  //   navigate('/');
+  // }
+
   return (
     <div>
       {/* Breadcrumb Area Start */}
@@ -38,20 +46,29 @@ const About = () => {
           <div className="row align-items-center">
             <div className="col-12 col-lg-6">
               <div className="about-us-content mb-80">
-                <h3 className="wow fadeInUp" data-wow-delay="100ms">We Live For Passion</h3>
-                <div className="line wow fadeInUp" data-wow-delay="200ms"></div>
-                <p className="wow fadeInUp" data-wow-delay="300ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do sunt explicabo. Nemo enim ipsam et dolore magnam aliquam quaerat voluptatem.</p>
-                <p className="wow fadeInUp" data-wow-delay="400ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do sunt explicabo. Nemo enim ipsam et dolore magnam aliquam quaerat voluptatem.</p>
-                <a className="btn alime-btn btn-2 mt-30 wow fadeInUp" data-wow-delay="500ms" href="#">Contact Us</a>
+                <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+                  <h3>We Live For Passion</h3>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__fadeInUp" delay={200} className='line'>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__fadeInUp" delay={300}>
+                  <p className="wow">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do sunt explicabo. Nemo enim ipsam et dolore magnam aliquam quaerat voluptatem.</p>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__fadeInUp" delay={400}>
+                  <p className="wow">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et do sunt explicabo. Nemo enim ipsam et dolore magnam aliquam quaerat voluptatem.</p>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__fadeInUp" delay={500}>
+                  <Link className='btn alime-btn btn-2 mt-30' to={"/contact"}>Contact Us</Link>
+                </AnimationOnScroll>
               </div>
             </div>
             <div className="col-12 col-lg-6">
-              <div className="about-video-area mb-80 wow fadeInUp" data-wow-delay="100ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={200} className='about-video-area mb-80'>
                 <img src={require('../../assets/img/bg-img/17.jpg')} alt="" />
                 <div className="video-icon">
                   <a href="https://www.youtube.com/watch?v=sSakBz_eYzQ" className="video-play-btn"><i className="arrow_triangle-right"></i></a>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
         </div>
@@ -63,44 +80,44 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='section-heading text-center'>
                 <h2>Why Choose Us</h2>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
 
           <div className="row">
             {/* Single Why Choose Area  */}
             <div className="col-md-6 col-lg-4">
-              <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="100ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='why-choose-us-content text-center mb-80'>
                 <div className="chosse-us-icon">
                   <i className="fa fa-film" aria-hidden="true"></i>
                 </div>
                 <h4>High Quality Images</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut elit, sed do eiusmod te</p>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             {/* Single Why Choose Area  */}
             <div className="col-md-6 col-lg-4">
-              <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="300ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={300} className='why-choose-us-content text-center mb-80'>
                 <div className="chosse-us-icon">
                   <i className="fa fa-pencil" aria-hidden="true"></i>
                 </div>
                 <h4>Abundant Experience</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut elit, sed do eiusmod te</p>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             {/* Single Why Choose Area  */}
             <div className="col-md-6 col-lg-4">
-              <div className="why-choose-us-content text-center mb-80 wow fadeInUp" data-wow-delay="500ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={500} className='why-choose-us-content text-center mb-80'>
                 <div className="chosse-us-icon">
                   <i className="fa fa-camera" aria-hidden="true"></i>
                 </div>
                 <h4>Modern Equipments</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur isicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut elit, sed do eiusmod te</p>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
         </div>
@@ -112,16 +129,16 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='section-heading text-center'>
                 <h2>Our Team</h2>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
 
           <div className="row">
             {/* Team Member Area  */}
             <div className="col-md-6 col-xl-3">
-              <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='team-content-area text-center mb-30'>
                 <div className="member-thumb">
                   <img src={require('../../assets/img/bg-img/19.jpg')} alt="" />
                 </div>
@@ -133,12 +150,12 @@ const About = () => {
                   <a href="#"><i className="ti-linkedin"></i></a>
                   <a href="#"><i className="ti-pinterest"></i></a>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             {/* Team Member Area  */}
             <div className="col-md-6 col-xl-3">
-              <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={300} className='team-content-area text-center mb-30'>
                 <div className="member-thumb">
                   <img src={require('../../assets/img/bg-img/20.jpg')} alt="" />
                 </div>
@@ -150,12 +167,12 @@ const About = () => {
                   <a href="#"><i className="ti-linkedin"></i></a>
                   <a href="#"><i className="ti-pinterest"></i></a>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             {/* Team Member Area  */}
             <div className="col-md-6 col-xl-3">
-              <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="500ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={500} className='team-content-area text-center mb-30'>
                 <div className="member-thumb">
                   <img src={require('../../assets/img/bg-img/21.jpg')} alt="" />
                 </div>
@@ -167,12 +184,12 @@ const About = () => {
                   <a href="#"><i className="ti-linkedin"></i></a>
                   <a href="#"><i className="ti-pinterest"></i></a>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
 
             {/* Team Member Area  */}
             <div className="col-md-6 col-xl-3">
-              <div className="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="700ms">
+              <AnimationOnScroll animateIn="animate__fadeInUp" delay={500} className='team-content-area text-center mb-30'>
                 <div className="member-thumb">
                   <img src={require('../../assets/img/bg-img/22.jpg')} alt="" />
                 </div>
@@ -184,7 +201,7 @@ const About = () => {
                   <a href="#"><i className="ti-linkedin"></i></a>
                   <a href="#"><i className="ti-pinterest"></i></a>
                 </div>
-              </div>
+              </AnimationOnScroll>
             </div>
           </div>
         </div>

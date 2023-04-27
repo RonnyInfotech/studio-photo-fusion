@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Contact = () => {
     return (
@@ -32,9 +33,9 @@ const Contact = () => {
             <div className="contact-area section-padding-80-50">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-lg-6">
+                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='col-12 col-lg-6'>
                             <h2 className="contact-title mb-30">Let’s Work <br />Together</h2>
-                        </div>
+                        </AnimationOnScroll>
                         <div className="col-12 col-md-6 col-lg-3">
                             {/* Contact Info */}
                             <div className="contact-info mb-30">

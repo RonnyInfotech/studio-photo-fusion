@@ -1,5 +1,6 @@
 import React from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const GridComponent = () => {
     const images = [
@@ -43,12 +44,14 @@ const GridComponent = () => {
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1050: 4, 1250: 5 }}>
             <Masonry gutter="20px">
                 {images.map((image, i) => (
-                    <div key={i} className="single-portfolio-content">
-                        <img src={image} alt="" />
-                        <div className="hover-content">
-                            <a href={image} className="portfolio-img">+</a>
+                    <AnimationOnScroll animateIn="animate__fadeInUp" delay={100}>
+                        <div key={i} className="single-portfolio-content">
+                            <img src={image} alt="" />
+                            <div className="hover-content">
+                                <a href={image} className="portfolio-img">+</a>
+                            </div>
                         </div>
-                    </div>
+                    </AnimationOnScroll>
                 ))}
             </Masonry>
         </ResponsiveMasonry>

@@ -3,6 +3,7 @@ import './Packages.css';
 import * as ROUTES from "../../constants/routes";
 import { Link } from 'react-router-dom';
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Packages = () => {
     return (
@@ -33,9 +34,10 @@ const Packages = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="title mb-30"> <span>Shooting</span>
+                            <AnimationOnScroll animateIn="animate__fadeInUp" delay={100} className='title mb-30'>
+                                <span>Shooting</span>
                                 <h2>Packages</h2>
-                            </div>
+                            </AnimationOnScroll>
                         </div>
                     </div>
                     <div className="row">
