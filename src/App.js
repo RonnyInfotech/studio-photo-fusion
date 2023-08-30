@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Home from './Components/Home/Home';
 import * as ROUTES from "./constants/routes";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -12,37 +13,46 @@ import Packages from './Components/Packages/Packages';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Services from './Components/Services/Services';
 import Testimonial from './Components/Testimonial/Testimonial';
+import FollowInstagram from './Components/FollowInstagram/FollowInstagram';
 import PhotoFusionContextProvider from './contexts/PhotoFusionContext';
+import "primereact/resources/themes/lara-light-indigo/theme.css";
+import Loader from './Components/Loader/Loader';
+import { BlockUI } from 'primereact/blockui';
 
 const App = () => {
+  const [blocked, setBlocked] = useState(true);
+
   AOS.init()
   AOS.refresh()
   AOS.init({
     duration: 500
   });
 
-  document.addEventListener('contextmenu', (e) => e.preventDefault());
+  // document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-  function ctrlShiftKey(e, keyCode) {
-    return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-  }
+  // function ctrlShiftKey(e, keyCode) {
+  //   return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+  // }
 
-  document.onkeydown = (e) => {
-    // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-    if (
-      e.keyCode === 123 ||
-      ctrlShiftKey(e, 'I') ||
-      ctrlShiftKey(e, 'J') ||
-      ctrlShiftKey(e, 'C') ||
-      (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-    )
-      return false;
-  };
+  // document.onkeydown = (e) => {
+  //   // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  //   if (
+  //     e.keyCode === 123 ||
+  //     ctrlShiftKey(e, 'I') ||
+  //     ctrlShiftKey(e, 'J') ||
+  //     ctrlShiftKey(e, 'C') ||
+  //     (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  //   )
+  //     return false;
+  // };
 
   return (
     <BrowserRouter>
       <PhotoFusionContextProvider>
         <Header />
+        {/* <BlockUI blocked={blocked} fullScreen template={<Loader />} /> */}
+        {/* <Test /> */}
+        {/* <Loader /> */}
         <div className="App">
           <Routes>
             <Route path={ROUTES.HOME} element={<Home />} />
@@ -54,7 +64,7 @@ const App = () => {
             <Route path={ROUTES.TESTIMONIAL} element={<Testimonial />} />
           </Routes>
         </div>
-        {/* <FollowInstagram /> */}
+        <FollowInstagram />
         <Footer />
       </PhotoFusionContextProvider>
     </BrowserRouter>

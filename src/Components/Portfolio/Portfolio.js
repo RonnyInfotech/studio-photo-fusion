@@ -142,7 +142,7 @@ const Portfolio = () => {
             </div>
             {/* Gallery Area End */}
 
-            <FollowInstagram />
+            {/* <FollowInstagram /> */}
         </div>
     )
 }

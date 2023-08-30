@@ -93,7 +93,7 @@ const Services = () => {
         </div>
       </section>
 
-      <FollowInstagram />
+      {/* <FollowInstagram /> */}
     </div>
   )
 }

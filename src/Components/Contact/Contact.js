@@ -71,7 +71,7 @@ const Contact = () => {
                 </div>
             </div>
             {/* Map Area End  */}
-            <FollowInstagram />
+            {/* <FollowInstagram /> */}
         </div>
     )
 }

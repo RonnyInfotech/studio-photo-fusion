@@ -31,6 +31,7 @@ const Home = () => {
                         ssr
                         removeArrowOnDeviceType={["tablet", "mobile"]}
                         responsive={responsive}
+                        customTransition={"1500ms"}
                     >
                         {images.map((ele, index) => {
                             return (

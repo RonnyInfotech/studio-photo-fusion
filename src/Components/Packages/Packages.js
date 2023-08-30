@@ -108,7 +108,7 @@ const Packages = () => {
                 </div>
             </section >
 
-            <FollowInstagram />
+            {/* <FollowInstagram /> */}
         </div >
     )
 }

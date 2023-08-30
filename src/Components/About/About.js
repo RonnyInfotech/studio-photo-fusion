@@ -209,7 +209,7 @@ const About = () => {
       {/* Our Team Area End */}
 
       {/* Follow Area Start  */}
-      <FollowInstagram />
+      {/* <FollowInstagram /> */}
       {/* Follow Area End */}
     </div >
   )

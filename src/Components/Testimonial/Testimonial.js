@@ -93,7 +93,7 @@ const Testimonial = () => {
                 </div>
             </section >
 
-            <FollowInstagram />
+            {/* <FollowInstagram /> */}
         </div >
     )
 }
