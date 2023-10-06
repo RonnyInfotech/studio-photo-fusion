@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
@@ -13,6 +13,11 @@ const About = () => {
   //   console.log("Demo..");
   //   navigate('/');
   // }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <div>

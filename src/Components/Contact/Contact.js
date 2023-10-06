@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import FollowInstagram from '../FollowInstagram/FollowInstagram';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Contact = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div>
             <section className="breadcrumb-area bg-img bg-overlay jarallax" style={{ backgroundImage: `url(${require("../../assets/img/bg-img/38.jpg")})` }}>

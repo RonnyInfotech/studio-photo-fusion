@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
-import FollowInstagram from '../FollowInstagram/FollowInstagram';
 import Carousel from 'react-multi-carousel';
-import './Testimonial.css';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import './Testimonial.css';
 
 const Testimonial = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const images = [
         0, 1, 2
     ];
@@ -98,4 +102,4 @@ const Testimonial = () => {
     )
 }
 
-export default Testimonial
+export default Testimonial;

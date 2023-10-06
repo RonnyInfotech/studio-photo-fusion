@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as ROUTES from "../../constants/routes";
 import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import './Services.css';
-import FollowInstagram from '../FollowInstagram/FollowInstagram';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Services = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const images = [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9
   ];

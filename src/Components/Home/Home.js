@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import GridComponent from '../GridComponent/GridComponent';
-import './Home.css';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { Link } from 'react-router-dom';
+import './Home.css';
 
 const Home = () => {
     const images = [
@@ -23,6 +22,11 @@ const Home = () => {
             items: 1,
         }
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <section className="welcome-area">
@@ -63,32 +67,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <div className="alime-portfolio-area section-padding-80 clearfix">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-12">
-                            {/* <!-- Projects Menu --> */}
-                            <div className="alime-projects-menu">
-                                <div className="portfolio-menu text-center">
-                                    <button className="btn active" data-filter="*">All</button>
-                                    <button className="btn" data-filter=".human">Human</button>
-                                    <button className="btn" data-filter=".nature">Nature</button>
-                                    <button className="btn" data-filter=".country">Country</button>
-                                    <button className="btn" data-filter=".video">Video</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <GridComponent />
-
-                    <div className="row">
-                        <AnimationOnScroll animateIn="animate__fadeInUp" delay={700} className='col-12 text-center'>
-                            <Link to={'/studio-photo-fusion'} className='btn alime-btn btn-2 mt-15'>View More</Link>
-                        </AnimationOnScroll>
-                    </div>
-                </div>
-            </div>
+            <GridComponent />
         </>
     )
 }
