@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from "../../constants/routes";
 import $ from 'jquery';
@@ -102,6 +102,26 @@ const Header = () => {
         $('#alimeNav').classyNav();
     }
 
+    const googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+            {
+                pageLanguage: "en",
+                autoDisplay: false
+            },
+            "google_translate_element"
+        );
+    };
+
+    useEffect(() => {
+        var addScript = document.createElement("script");
+        addScript.setAttribute(
+            "src",
+            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        );
+        document.body.appendChild(addScript);
+        window.googleTranslateElementInit = googleTranslateElementInit;
+    }, []);
+
     return (
         <header className="header-area">
             <ScrollToTop smooth color="white" component={<i className="arrow_carrot-up"></i>} />
@@ -119,6 +139,7 @@ const Header = () => {
                                     <div className="cross-wrap"><span className="top"></span><span className="bottom"></span></div>
                                 </div>
                                 <div className="classynav">
+                                    <div id="google_translate_element"></div>
                                     <ul id="nav">
                                         <li className={`${activeTab === "Home" ? 'active' : ''}`}><Link onClick={() => setActiveTab("Home")} to={ROUTES.HOME}>Home</Link></li>
 

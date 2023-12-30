@@ -6,4 +6,5 @@ export const HEADER = "/header";
 export const PACKAGES = "/packages";
 export const PORTFOLIO = "/portfolio";
 export const SERVICES = "/services";
-export const TESTIMONIAL = "/Testimonial";
+export const TESTIMONIAL = "/testimonial";
+export const ADMIN = "/admin";

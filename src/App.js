@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import Home from './Components/Home/Home';
 import * as ROUTES from "./constants/routes";
@@ -18,15 +18,21 @@ import PhotoFusionContextProvider from './contexts/PhotoFusionContext';
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import Loader from './Components/Loader/Loader';
 import { BlockUI } from 'primereact/blockui';
+import Dashboard, { admin } from './Admin/Components/Dashboard/Dashboard';
 
 const App = () => {
   const [blocked, setBlocked] = useState(true);
+  const [show, setShow] = useState(null);
 
   AOS.init()
   AOS.refresh()
   AOS.init({
     duration: 500
   });
+
+  useEffect(() => {
+    setShow(sessionStorage.getItem("show"));
+  }, [])
 
   // document.addEventListener('contextmenu', (e) => e.preventDefault());
 
@@ -46,10 +52,12 @@ const App = () => {
   //     return false;
   // };
 
+  console.log("isADmin,,,", show);
+
   return (
     <BrowserRouter>
       <PhotoFusionContextProvider>
-        <Header />
+        {show && <Header />}
         {/* <BlockUI blocked={blocked} fullScreen template={<Loader />} /> */}
         {/* <Test /> */}
         {/* <Loader /> */}
@@ -62,10 +70,12 @@ const App = () => {
             <Route path={ROUTES.PORTFOLIO} element={<Portfolio />} />
             <Route path={ROUTES.SERVICES} element={<Services />} />
             <Route path={ROUTES.TESTIMONIAL} element={<Testimonial />} />
+            <Route path={ROUTES.ADMIN} element={<Dashboard />} />
           </Routes>
         </div>
-        <FollowInstagram />
-        <Footer />
+        {!show && <FollowInstagram />}
+        {!show && <Footer />}
+        {/* <Footer /> */}
       </PhotoFusionContextProvider>
     </BrowserRouter>
   )

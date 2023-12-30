@@ -24,6 +24,7 @@ const Home = () => {
     };
 
     useEffect(() => {
+        sessionStorage.setItem("show", true);
         window.scrollTo(0, 0);
     }, []);
 
